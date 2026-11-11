@@ -1,7 +1,6 @@
 import { Head, Link, router } from '@inertiajs/react';
 import { Award, ShieldCheck, Smartphone, Truck } from 'lucide-react';
 import HomeBentoBanner from '../../Components/HomeBentoBanner';
-import HomeCategoryStrip from '../../Components/HomeCategoryStrip';
 import ProductCard from '../../Components/ProductCard';
 import ShopLayout from '../../Layouts/ShopLayout';
 
@@ -28,7 +27,7 @@ const SERVICE_HIGHLIGHTS = [
         icon: Award,
         title: '100% Authentic Gear',
         desc: 'Curated electronics, wearables, fashion & workspace',
-        color: 'text-indigo-600 bg-indigo-50',
+        color: 'text-[#0095D9] bg-[#0095D9]/10',
     },
 ];
 
@@ -49,8 +48,6 @@ export default function Home({ categories, products, filters }) {
     return (
         <ShopLayout initialSearch={filters.search || ''}>
             <Head title="Shop Quality Tech, Fashion & Lifestyle" />
-
-            <HomeCategoryStrip categories={categories} filters={filters} onApplyFilter={applyFilter} />
 
             <HomeBentoBanner />
 

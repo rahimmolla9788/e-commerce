@@ -68,7 +68,7 @@ export default function ForgotPassword({ resetPhone, maskedPhone, otpPreview }) 
             <div className="mx-auto flex max-w-md flex-col justify-center px-4 py-12 sm:px-6">
                 <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
                     <div className="mb-6 text-center">
-                        <span className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600">
+                        <span className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0095D9]/10 text-[#0095D9]">
                             <KeyRound className="h-6 w-6" />
                         </span>
                         <h1 className="text-2xl font-extrabold text-slate-900">Reset Password</h1>
@@ -94,7 +94,7 @@ export default function ForgotPassword({ resetPhone, maskedPhone, otpPreview }) 
                                         value={requestForm.data.phone}
                                         onChange={(e) => requestForm.setData('phone', e.target.value)}
                                         placeholder="01712345678 or +8801712345678"
-                                        className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-4 text-sm focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+                                        className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-4 text-sm focus:border-[#0095D9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0095D9]/20"
                                     />
                                 </div>
                                 {requestForm.errors.phone && (
@@ -105,7 +105,7 @@ export default function ForgotPassword({ resetPhone, maskedPhone, otpPreview }) 
                             <button
                                 type="submit"
                                 disabled={requestForm.processing}
-                                className="flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 py-3 text-sm font-bold text-white shadow-sm shadow-indigo-500/25 transition hover:bg-indigo-700 disabled:opacity-60"
+                                className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#0095D9] py-3 text-sm font-bold text-white shadow-sm shadow-[#0095D9]/25 transition hover:bg-[#007EB8] disabled:opacity-60"
                             >
                                 {requestForm.processing ? 'Generating OTP...' : 'Send Reset OTP'}
                                 <ArrowRight className="h-4 w-4" />
@@ -129,7 +129,7 @@ export default function ForgotPassword({ resetPhone, maskedPhone, otpPreview }) 
                                             resetForm.setData('code', e.target.value.replace(/\D/g, '').slice(0, 6))
                                         }
                                         placeholder="000000"
-                                        className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2.5 text-center font-mono text-xl font-extrabold tracking-[0.4em] text-slate-900 focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+                                        className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2.5 text-center font-mono text-xl font-extrabold tracking-[0.4em] text-slate-900 focus:border-[#0095D9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0095D9]/20"
                                     />
                                     {resetForm.errors.code && (
                                         <p className="mt-1 text-xs font-medium text-rose-600">{resetForm.errors.code}</p>
@@ -149,7 +149,7 @@ export default function ForgotPassword({ resetPhone, maskedPhone, otpPreview }) 
                                             value={resetForm.data.password}
                                             onChange={(e) => resetForm.setData('password', e.target.value)}
                                             placeholder="Minimum 8 characters"
-                                            className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-4 text-sm focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+                                            className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-4 text-sm focus:border-[#0095D9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0095D9]/20"
                                         />
                                     </div>
                                     {resetForm.errors.password && (
@@ -173,7 +173,7 @@ export default function ForgotPassword({ resetPhone, maskedPhone, otpPreview }) 
                                             value={resetForm.data.password_confirmation}
                                             onChange={(e) => resetForm.setData('password_confirmation', e.target.value)}
                                             placeholder="Re-enter new password"
-                                            className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-4 text-sm focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+                                            className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-4 text-sm focus:border-[#0095D9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0095D9]/20"
                                         />
                                     </div>
                                 </div>
@@ -181,7 +181,7 @@ export default function ForgotPassword({ resetPhone, maskedPhone, otpPreview }) 
                                 <button
                                     type="submit"
                                     disabled={resetForm.processing}
-                                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 py-3 text-sm font-bold text-white shadow-sm shadow-indigo-500/25 transition hover:bg-indigo-700 disabled:opacity-60"
+                                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#0095D9] py-3 text-sm font-bold text-white shadow-sm shadow-[#0095D9]/25 transition hover:bg-[#007EB8] disabled:opacity-60"
                                 >
                                     {resetForm.processing ? 'Updating Password...' : 'Verify OTP & Reset Password'}
                                 </button>
@@ -192,7 +192,7 @@ export default function ForgotPassword({ resetPhone, maskedPhone, otpPreview }) 
                                     type="button"
                                     disabled={cooldown > 0 || resending}
                                     onClick={handleResend}
-                                    className="inline-flex items-center gap-1.5 font-semibold text-indigo-600 hover:text-indigo-700 disabled:cursor-not-allowed disabled:text-slate-400"
+                                    className="inline-flex items-center gap-1.5 font-semibold text-[#0095D9] hover:text-[#007EB8] disabled:cursor-not-allowed disabled:text-slate-400"
                                 >
                                     <RefreshCw className={`h-3.5 w-3.5 ${resending ? 'animate-spin' : ''}`} />
                                     {cooldown > 0 ? `Resend OTP in ${cooldown}s` : 'Resend OTP'}
@@ -216,7 +216,7 @@ export default function ForgotPassword({ resetPhone, maskedPhone, otpPreview }) 
 
                     <p className="mt-6 text-center text-sm text-slate-600">
                         Remember your password?{' '}
-                        <Link href="/login" className="font-bold text-indigo-600 hover:text-indigo-700">
+                        <Link href="/login" className="font-bold text-[#0095D9] hover:text-[#007EB8]">
                             Back to Login
                         </Link>
                     </p>

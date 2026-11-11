@@ -36,7 +36,7 @@ export default function ProductShow({ product, relatedProducts }) {
             <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
                 <Link
                     href="/"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 transition hover:text-indigo-600"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 transition hover:text-[#0095D9]"
                 >
                     <ArrowLeft className="h-3.5 w-3.5" />
                     Back to Storefront
@@ -60,7 +60,7 @@ export default function ProductShow({ product, relatedProducts }) {
                         {product.category && (
                             <Link
                                 href={`/?category=${product.category.slug}`}
-                                className="text-xs font-bold uppercase tracking-wider text-indigo-600"
+                                className="text-xs font-bold uppercase tracking-wider text-[#0095D9] hover:text-[#007EB8]"
                             >
                                 {product.category.name}
                             </Link>
@@ -74,7 +74,7 @@ export default function ProductShow({ product, relatedProducts }) {
                         )}
 
                         <div className="mt-5 flex items-baseline gap-3">
-                            <span className="text-3xl font-extrabold text-slate-900">
+                            <span className="text-3xl font-extrabold text-[#0095D9]">
                                 {formatPrice(product.price)}
                             </span>
                             {product.compare_price && Number(product.compare_price) > Number(product.price) && (
@@ -126,7 +126,7 @@ export default function ProductShow({ product, relatedProducts }) {
                                 type="button"
                                 disabled={product.stock <= 0 || submitting}
                                 onClick={() => handleAddToCart(false)}
-                                className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:bg-slate-300"
+                                className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#0095D9] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#007EB8] disabled:cursor-not-allowed disabled:bg-slate-300"
                             >
                                 <ShoppingBag className="h-4 w-4" />
                                 {submitting ? 'Adding...' : 'Add to Cart'}
@@ -144,7 +144,7 @@ export default function ProductShow({ product, relatedProducts }) {
 
                         <div className="mt-6 grid grid-cols-1 gap-3 rounded-2xl bg-slate-50 p-4 sm:grid-cols-2">
                             <div className="flex items-center gap-2.5 text-xs text-slate-600">
-                                <Truck className="h-4 w-4 text-indigo-600" />
+                                <Truck className="h-4 w-4 text-[#0095D9]" />
                                 <span>Free shipping over ৳2,000</span>
                             </div>
                             <div className="flex items-center gap-2.5 text-xs text-slate-600">

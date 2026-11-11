@@ -22,7 +22,7 @@ export default function OrdersIndex({ orders }) {
                         </p>
                         <Link
                             href="/"
-                            className="mt-5 inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-bold text-white"
+                            className="mt-5 inline-flex items-center gap-2 rounded-xl bg-[#0095D9] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#007EB8]"
                         >
                             Start Shopping
                             <ArrowRight className="h-4 w-4" />
@@ -34,7 +34,7 @@ export default function OrdersIndex({ orders }) {
                             <Link
                                 key={order.id}
                                 href={`/orders/${order.order_number}`}
-                                className="flex flex-col justify-between gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-xs transition hover:border-indigo-300 sm:flex-row sm:items-center"
+                                className="flex flex-col justify-between gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-xs transition hover:border-[#0095D9]/50 sm:flex-row sm:items-center"
                             >
                                 <div>
                                     <div className="flex flex-wrap items-center gap-3">

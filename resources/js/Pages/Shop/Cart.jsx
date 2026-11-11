@@ -52,7 +52,7 @@ export default function Cart({ cart }) {
                         </p>
                         <Link
                             href="/"
-                            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-indigo-700"
+                            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#0095D9] px-5 py-2.5 text-sm font-bold text-white hover:bg-[#007EB8]"
                         >
                             Explore Storefront
                             <ArrowRight className="h-4 w-4" />
@@ -79,13 +79,13 @@ export default function Cart({ cart }) {
                                         </Link>
                                         <div>
                                             {item.category_name && (
-                                                <p className="text-[11px] font-bold uppercase tracking-wider text-indigo-600">
+                                                <p className="text-[11px] font-bold uppercase tracking-wider text-[#0095D9]">
                                                     {item.category_name}
                                                 </p>
                                             )}
                                             <Link
                                                 href={`/products/${item.slug}`}
-                                                className="text-base font-bold text-slate-900 hover:text-indigo-600"
+                                                className="text-base font-bold text-slate-900 hover:text-[#0095D9]"
                                             >
                                                 {item.name}
                                             </Link>
@@ -173,7 +173,7 @@ export default function Cart({ cart }) {
 
                             <Link
                                 href="/checkout"
-                                className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-indigo-700"
+                                className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0095D9] py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#007EB8]"
                             >
                                 Proceed to Checkout
                                 <ArrowRight className="h-4 w-4" />

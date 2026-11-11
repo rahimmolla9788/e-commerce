@@ -78,7 +78,7 @@ export default function VerifyOtp({ phone, maskedPhone, otpPreview }) {
                                 value={data.code}
                                 onChange={(e) => setData('code', e.target.value.replace(/\D/g, '').slice(0, 6))}
                                 placeholder="000000"
-                                className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3 text-center font-mono text-2xl font-extrabold tracking-[0.4em] text-slate-900 focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+                                className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3 text-center font-mono text-2xl font-extrabold tracking-[0.4em] text-slate-900 focus:border-[#0095D9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0095D9]/20"
                             />
                             {errors.code && <p className="mt-1.5 text-xs font-medium text-rose-600">{errors.code}</p>}
                         </div>
@@ -86,7 +86,7 @@ export default function VerifyOtp({ phone, maskedPhone, otpPreview }) {
                         <button
                             type="submit"
                             disabled={processing || data.code.length !== 6}
-                            className="flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 py-3 text-sm font-bold text-white shadow-sm shadow-indigo-500/25 transition hover:bg-indigo-700 disabled:opacity-60"
+                            className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#0095D9] py-3 text-sm font-bold text-white shadow-sm shadow-[#0095D9]/25 transition hover:bg-[#007EB8] disabled:opacity-60"
                         >
                             <CheckCircle2 className="h-4 w-4" />
                             {processing ? 'Verifying...' : 'Verify OTP & Continue'}
@@ -98,7 +98,7 @@ export default function VerifyOtp({ phone, maskedPhone, otpPreview }) {
                             type="button"
                             disabled={cooldown > 0 || resending}
                             onClick={handleResend}
-                            className="inline-flex items-center gap-1.5 font-semibold text-indigo-600 hover:text-indigo-700 disabled:cursor-not-allowed disabled:text-slate-400"
+                            className="inline-flex items-center gap-1.5 font-semibold text-[#0095D9] hover:text-[#007EB8] disabled:cursor-not-allowed disabled:text-slate-400"
                         >
                             <RefreshCw className={`h-3.5 w-3.5 ${resending ? 'animate-spin' : ''}`} />
                             {cooldown > 0 ? `Resend OTP in ${cooldown}s` : 'Resend OTP'}

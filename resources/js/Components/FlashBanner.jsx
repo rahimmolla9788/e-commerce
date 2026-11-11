@@ -27,7 +27,7 @@ export default function FlashBanner() {
     const styles = {
         success: 'bg-emerald-50 border-emerald-200 text-emerald-900',
         error: 'bg-rose-50 border-rose-200 text-rose-900',
-        info: 'bg-indigo-50 border-indigo-200 text-indigo-900',
+        info: 'bg-[#0095D9]/10 border-[#0095D9]/30 text-[#054D73]',
     };
 
     const Icon =

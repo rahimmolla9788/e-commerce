@@ -56,7 +56,7 @@ export default function Checkout({ cart, defaults }) {
                                             required
                                             value={data.customer_name}
                                             onChange={(e) => setData('customer_name', e.target.value)}
-                                            className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-4 text-sm focus:border-indigo-500 focus:bg-white focus:outline-none"
+                                            className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-4 text-sm focus:border-[#0095D9] focus:bg-white focus:outline-none"
                                         />
                                     </div>
                                     {errors.customer_name && (
@@ -75,7 +75,7 @@ export default function Checkout({ cart, defaults }) {
                                             required
                                             value={data.customer_phone}
                                             onChange={(e) => setData('customer_phone', e.target.value)}
-                                            className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-4 text-sm focus:border-indigo-500 focus:bg-white focus:outline-none"
+                                            className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-4 text-sm focus:border-[#0095D9] focus:bg-white focus:outline-none"
                                         />
                                     </div>
                                     {errors.customer_phone && (
@@ -95,7 +95,7 @@ export default function Checkout({ cart, defaults }) {
                                             value={data.shipping_address}
                                             onChange={(e) => setData('shipping_address', e.target.value)}
                                             placeholder="House, Road, Area..."
-                                            className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-4 text-sm focus:border-indigo-500 focus:bg-white focus:outline-none"
+                                            className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-4 text-sm focus:border-[#0095D9] focus:bg-white focus:outline-none"
                                         />
                                     </div>
                                     {errors.shipping_address && (
@@ -112,7 +112,7 @@ export default function Checkout({ cart, defaults }) {
                                         required
                                         value={data.shipping_city}
                                         onChange={(e) => setData('shipping_city', e.target.value)}
-                                        className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-indigo-500 focus:bg-white focus:outline-none"
+                                        className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-[#0095D9] focus:bg-white focus:outline-none"
                                     />
                                     {errors.shipping_city && (
                                         <p className="mt-1 text-xs text-rose-600">{errors.shipping_city}</p>
@@ -128,7 +128,7 @@ export default function Checkout({ cart, defaults }) {
                                         value={data.notes}
                                         onChange={(e) => setData('notes', e.target.value)}
                                         placeholder="e.g. Call before arrival"
-                                        className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-indigo-500 focus:bg-white focus:outline-none"
+                                        className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-[#0095D9] focus:bg-white focus:outline-none"
                                     />
                                 </div>
                             </div>
@@ -136,7 +136,7 @@ export default function Checkout({ cart, defaults }) {
 
                         <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xs">
                             <div className="flex items-center gap-2">
-                                <CreditCard className="h-5 w-5 text-indigo-600" />
+                                <CreditCard className="h-5 w-5 text-[#0095D9]" />
                                 <h2 className="text-lg font-bold text-slate-900">Payment Method</h2>
                             </div>
 
@@ -150,7 +150,7 @@ export default function Checkout({ cart, defaults }) {
                                             onClick={() => setData('payment_method', option.id)}
                                             className={`rounded-2xl border p-4 text-left transition ${
                                                 selected
-                                                    ? 'border-indigo-600 bg-indigo-50/60 ring-2 ring-indigo-500/20'
+                                                    ? 'border-[#0095D9] bg-[#0095D9]/8 ring-2 ring-[#0095D9]/20'
                                                     : 'border-slate-200 hover:border-slate-300'
                                             }`}
                                         >
@@ -199,7 +199,7 @@ export default function Checkout({ cart, defaults }) {
                         <button
                             type="submit"
                             disabled={processing}
-                            className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-indigo-700 disabled:opacity-60"
+                            className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0095D9] py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#007EB8] disabled:opacity-60"
                         >
                             <CheckCircle2 className="h-4 w-4" />
                             {processing ? 'Placing Order...' : 'Place Order'}

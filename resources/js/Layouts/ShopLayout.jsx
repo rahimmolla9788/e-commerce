@@ -6,7 +6,6 @@ import {
     Menu,
     Package,
     Search,
-    ShieldCheck,
     ShoppingBag,
     ShoppingCart,
     User,
@@ -35,40 +34,14 @@ export default function ShopLayout({ children, initialSearch = '' }) {
         <div className="flex min-h-screen flex-col bg-[#F4F6F8] text-slate-900">
             <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white">
                 <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-                    <div className="flex shrink-0 items-center gap-5">
-                        <Link href="/" className="flex items-center gap-2">
-                            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#0095D9] text-white shadow-2xs">
-                                <ShoppingBag className="h-4.5 w-4.5" />
-                            </span>
-                            <span className="text-2xl font-black tracking-tight text-[#0095D9]">
-                                {appName?.toLowerCase() || 'novamart'}
-                            </span>
-                        </Link>
-
-                        <nav className="hidden items-center gap-4 xl:flex">
-                            <Link
-                                href="/"
-                                className="text-xs font-semibold text-slate-600 transition hover:text-[#0095D9]"
-                            >
-                                Shop
-                            </Link>
-                            {auth?.user && (
-                                <Link
-                                    href="/orders"
-                                    className="text-xs font-semibold text-slate-600 transition hover:text-[#0095D9]"
-                                >
-                                    My Orders
-                                </Link>
-                            )}
-                            <Link
-                                href="/admin"
-                                className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600 transition hover:bg-[#0095D9]/10 hover:text-[#0095D9]"
-                            >
-                                <ShieldCheck className="h-3.5 w-3.5" />
-                                Admin
-                            </Link>
-                        </nav>
-                    </div>
+                    <Link href="/" className="flex shrink-0 items-center gap-2">
+                        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#0095D9] text-white shadow-2xs">
+                            <ShoppingBag className="h-4.5 w-4.5" />
+                        </span>
+                        <span className="text-2xl font-black tracking-tight text-[#0095D9]">
+                            {appName?.toLowerCase() || 'novamart'}
+                        </span>
+                    </Link>
 
                     <form
                         onSubmit={handleSearch}
@@ -141,14 +114,6 @@ export default function ShopLayout({ children, initialSearch = '' }) {
                             </span>
                         </Link>
 
-                        <Link
-                            href="/admin"
-                            className="hidden items-center gap-1 rounded-lg border border-slate-200 px-2.5 py-1.5 text-xs font-semibold text-slate-600 transition hover:border-[#0095D9]/40 hover:text-[#0095D9] sm:inline-flex xl:hidden"
-                        >
-                            <ShieldCheck className="h-3.5 w-3.5" />
-                            Admin
-                        </Link>
-
                         <button
                             type="button"
                             onClick={() => setMobileMenuOpen((prev) => !prev)}
@@ -185,12 +150,6 @@ export default function ShopLayout({ children, initialSearch = '' }) {
                 {mobileMenuOpen && (
                     <div className="border-t border-slate-200 bg-white px-4 py-4 sm:hidden">
                         <div className="flex flex-col gap-2 text-sm font-semibold">
-                            <Link href="/" className="rounded-lg px-3 py-2 hover:bg-slate-100">
-                                Shop
-                            </Link>
-                            <Link href="/admin" className="rounded-lg px-3 py-2 hover:bg-slate-100">
-                                Admin Portal (/admin)
-                            </Link>
                             {auth?.user ? (
                                 <>
                                     <Link
